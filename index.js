@@ -94,7 +94,32 @@ client.on(`message`, async (message) => {
     //send the Message
     message.channel.send(embed)
   }
-
+   
+//An suuport announcement for everyone but no one knows so fine ^w^
+  if(message.content.startsWith(${prefix}support)){
+    //define saymsg
+    const saymsg = message.content.slice(Number(prefix.length) + 5)
+    //define embed
+    const embed = new Discord.MessageEmbed()
+    .setColor("#FF0000")
+    .setImage(https://cdn.discordapp.com/attachments/827166558714593290/830464718623080488/standard_8.gif)
+    .setDescription (
+    Links
+Link Server 
+[Support](https://discord.gg/DDtRN4qK63)
+-
+Link Bot
+[Invite](https://discord.com/oauth2/authorize?client_id=807289119193432125&permissions=8&scope=bot))
+    .setFooter(message.author.username, message.author.displayAvatarURL)
+    .setImage(``)
+    .setTitle(**Suuport MoonBot**) 
+    .setThumbnail(https://cdn.discordapp.com/attachments/793225556501987358/831209697280917524/PicsArt_04-12-07.50.28.jpg)
+    .setTimestamp()
+    
+    //send the Message
+    message.channel.send(embed)
+   message.react(":emoji_4:")
+  }
 
 //command Handler DO NOT TOUCH
  const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(prefix)})\\s*`);
